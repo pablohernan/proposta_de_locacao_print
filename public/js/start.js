@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
         'card-buttons': function(p, pipe) {
           return [
             {
-              icon: 'pp-ico-print',
-              text: 'Imprimir - Proposta de Locação',
+              icon: './images/icon_grande.svg',
+              text: 'Imprimir',
               callback: function(p) {
 
                   p.modal({
