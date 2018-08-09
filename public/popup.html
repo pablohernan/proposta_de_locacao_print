@@ -4754,17 +4754,17 @@ else{//convencional. padrao selecionado
   $(".tbl_popup").hide();
   $(".tbl_outros").hide();
 } 
-window.print();
+//window.print();
 
-
+printDiv('a');
 
 function printDiv(divName){
   //var printContents = document.getElementById(divName).innerHTML;
   //var originalContents = document.body.innerHTML;
   //document.body.innerHTML = printContents;
-  $('.container').removeClass('container').addClass('container_print');
+  //$('.container').removeClass('container').addClass('container_print');
   window.print();
-  $('.container_print').removeClass('container_print').addClass('container');
+  //$('.container_print').removeClass('container_print').addClass('container');
   //document.body.innerHTML = originalContents;container_print
 }
 
