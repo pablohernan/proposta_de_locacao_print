@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="https://app.pipefy.com/apps/style.css" />
+    <link rel="stylesheet" media="all" href="./css/style.css?154s57" />
+    <link rel="stylesheet" media="all" href="./css/tabs.css?4ak" />
+    <link rel="stylesheet" media="all" href="./css/collapse.css?4ak" />
+    <link rel="stylesheet" media="all" href="./css/table.css?1" />
+
+    <style>
+      #list {
+        padding-top: 14px;
+        padding-bottom: 10px;
+      }
+      #list a {
+        display:block;
+        padding: 10px;
+      }
+      .table_100{
+        width: 100%;
+      }
+      #container{ width: 900px; }
+      td{
+        border-right: 5px solid white;
+      }
+      .td_49{ width: 49%; }
+      .pp-collapse-title{
+        font-size: 18px;
+        margin-top: 50px;
+      }
+      .padding_20px{
+        font-size: 38px;
+      }
+      .pp-input{
+        background-color: #eeecea;
+      }
+
+      .hidden{ display: none }
+
+
+
+    </style>
+  </head>
+  <body class="pp-theme-pipefy">
+
+    
+    
+    <!-- Pipefy Apps SDK.js -->
+    <script src="https://d1ukdhoxof1oxs.cloudfront.net/pipefy-client.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />   
+    <script src="./js/htmlentities.js?a1a12151454s6a"></script>       
+    <script src="./js/data-base.js?a22s1111aaa54a1aaa1"></script>
+    <script src="./js/grid.js?1a1asa"></script>
+    <script src="./js/tabs.js?1a1asa"></script>
+    <script src="./js/collapse.js?1a1asa"></script>
+    <script src="./js/ferramentas.js?1a1asa"></script>
+    <script src="./js/popup.js?a111asaaa21aaa1aqqa"></script>  
+    <script src="./js/jquery.maskMoney.js?a11asaaaa1"></script>
+    <script src="./js/mask.js?a11asaaaa1"></script>
+    <script src="./js/required.js?a1a1215544aa1454saa6a"></script>
+    <script src="./js/moment.min.js?a1a12155441454aas6a"></script>
+    <script src="./js/valida.js?a1a12155441454saa6a"></script>
+    <script src="./js/card-tab.js?a111asaaa21"></script>  
+    
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>    
+
+
+<script type="text/javascript">
+
+
+
+  
+$('input').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('textarea').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('select').each(function(){
+    $(this).replaceWith('<input type="text" tabindex="0" class="pp-input save" value="[--'+$(this).attr('id')+'--]" id="'+$(this).attr('id')+'" name="'+$(this).attr('id')+'">');
+})
+
+$('.pp-custom-select').removeClass('pp-custom-select');
+
+var tipoNegociacao = $('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val();
+//alert($('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val());
+if(tipoNegociacao == 'OUTROS'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").show();
+}
+else if(tipoNegociacao == 'POP_UP'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").show();
+  $(".tbl_outros").hide();
+}
+else{//convencional. padrao selecionado
+  $(".tbl_convencional").show();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").hide();
+} 
+
+
+
+</script>   
+
+    <!-- LOCAL 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" media="all" href="https://s3.amazonaws.com/pipestyle/3.5.12/assets/stylesheets/platform-apps.css" />    
+    <script src="http://localhost/pipefy/forms/start-form-js/public/js/card-tab.js?o"></script>-->
+    <!-- LOCAL -->
+
+  </body>
+</html>
