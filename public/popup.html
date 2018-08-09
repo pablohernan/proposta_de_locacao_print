@@ -4709,7 +4709,46 @@ type="text" tabindex="0" class="pp-input save">
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>    
 
+<script type="text/javascript">
 
+
+
+  
+$('input').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('textarea').each(function(){
+    $(this).val('[--'+$(this).attr('id')+'--]');
+})
+
+$('select').each(function(){
+    $(this).replaceWith('<input type="text" tabindex="0" class="pp-input save" value="[--'+$(this).attr('id')+'--]" id="'+$(this).attr('id')+'" name="'+$(this).attr('id')+'">');
+})
+
+$('.pp-custom-select').removeClass('pp-custom-select');
+
+var tipoNegociacao = $('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val();
+//alert($('#DADOS_GERAIS\\.TIPO_NEGOCIACAO').val());
+if(tipoNegociacao == 'OUTROS'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").show();
+}
+else if(tipoNegociacao == 'POP_UP'){
+  $(".tbl_convencional").hide();
+  $(".tbl_popup").show();
+  $(".tbl_outros").hide();
+}
+else{//convencional. padrao selecionado
+  $(".tbl_convencional").show();
+  $(".tbl_popup").hide();
+  $(".tbl_outros").hide();
+} 
+
+
+
+</script>   
     
 
     <!-- LOCAL 
