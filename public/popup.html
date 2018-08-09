@@ -26,14 +26,8 @@
         margin-left: 70px; 
         width: 94%;
         height: 100%;
-        overflow-y: scroll;        
-      }
-      #scroll{ 
-        width: 94%;
-        height: 100%;
         overflow-y: scroll;
-      }      
-
+      }
       td{
         border-right: 5px solid white;
       }
@@ -57,7 +51,7 @@
   </head>
   <body class="pp-theme-pipefy">
 
- <div id="container scroll">
+ <div id="container">
 
         <div id="load" class="loadBox"  style="display:none"o>
             <span class="docs-boxes-link doc-box-3 pp-ico-loading"></span>
@@ -4757,18 +4751,17 @@ else{//convencional. padrao selecionado
   $(".tbl_popup").hide();
   $(".tbl_outros").hide();
 } 
-//window.print();
+window.print();
 
-printDiv('a');
+
 
 function printDiv(divName){
   //var printContents = document.getElementById(divName).innerHTML;
   //var originalContents = document.body.innerHTML;
   //document.body.innerHTML = printContents;
-  //$('.container').removeClass('container').addClass('container_print');
+
   window.print();
-  //$('.container_print').removeClass('container_print').addClass('container');
-  //document.body.innerHTML = originalContents;container_print
+  //document.body.innerHTML = originalContents;
 }
 
 
