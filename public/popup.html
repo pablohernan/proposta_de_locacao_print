@@ -4754,12 +4754,13 @@ window.print();
 
 
 function printDiv(divName){
-  var printContents = document.getElementById('container').innerHTML;
-  var originalContents = document.body.innerHTML;
-  document.body.innerHTML = printContents;
+
+$('.container').css('width', '94%' );
+$('.container').css('overflow-y', 'scroll' );
 
   window.print();
-  document.body.innerHTML = originalContents;
+
+$('.container').removeAttr( 'style' );
 }
 
 
