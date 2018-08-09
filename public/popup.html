@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" crossorigin="anonymous" -->
-    <!-- link rel="stylesheet" media="all" href="https://app.pipefy.com/apps/style.css" / -->
+    <link rel="stylesheet" media="all" href="https://app.pipefy.com/apps/stylea.css" />
     <!--link rel="stylesheet" media="all" href="./css/style.css?154s57" />
     <link rel="stylesheet" media="all" href="./css/tabs.css?4ak" />
     <link rel="stylesheet" media="all" href="./css/collapse.css?4ak" />
@@ -21,12 +21,7 @@
       .table_100{
         width: 100%;
       }
-      #container{ 
-        width: 900px; 
-        margin-left: 70px; 
-        height: 90%; 
-        overflow-y: scroll;
-      }
+      #container{ width: 900px; margin-left: 70px; }
       td{
         border-right: 5px solid white;
       }
@@ -4750,15 +4745,17 @@ else{//convencional. padrao selecionado
   $(".tbl_popup").hide();
   $(".tbl_outros").hide();
 } 
+window.print();
 
 
 
 function printDiv(divName){
-  var printContents = document.getElementById(divName).innerHTML;
-  var originalContents = document.body.innerHTML;
-  document.body.innerHTML = printContents;
+  //var printContents = document.getElementById(divName).innerHTML;
+  //var originalContents = document.body.innerHTML;
+  //document.body.innerHTML = printContents;
+
   window.print();
-  document.body.innerHTML = originalContents;
+  //document.body.innerHTML = originalContents;
 }
 
 
