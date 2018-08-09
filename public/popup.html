@@ -27,7 +27,7 @@
       }
       .td_49{ width: 49%; }
       .pp-collapse-title{
-        font-size: 18px;
+        font-size: 16px;
         margin-top: 50px;
       }
       .padding_20px{
@@ -4680,7 +4680,7 @@ type="text" tabindex="0" class="pp-input save">
           <br>     
 
           <p id="btnSalvar">
-            <a href="javascript:window.print()" class="pp-btn"><span>Salvar</span></a>
+            <a href="javascript:printDiv('container')" class="pp-btn"><span>Salvar</span></a>
           </p>
           <br>                
 
@@ -4745,6 +4745,17 @@ else{//convencional. padrao selecionado
   $(".tbl_popup").hide();
   $(".tbl_outros").hide();
 } 
+
+
+
+function printDiv(divName){
+  var printContents = document.getElementById(divName).innerHTML;
+  var originalContents = document.body.innerHTML;
+  document.body.innerHTML = printContents;
+  window.print();
+  document.body.innerHTML = originalContents;
+}
+
 
 
 
