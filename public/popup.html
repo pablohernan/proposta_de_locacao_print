@@ -26,6 +26,10 @@
         margin-left: 70px; 
         height: 100%;
       }
+      .container_scroll{
+        width: 94%; 
+        overflow-y: scroll;
+      }
       td{
         border-right: 5px solid white;
       }
@@ -49,7 +53,7 @@
   </head>
   <body class="pp-theme-pipefy">
 
- <div id="container">
+ <div id="container" class="container_scroll">
 
         <div id="load" class="loadBox"  style="display:none"o>
             <span class="docs-boxes-link doc-box-3 pp-ico-loading"></span>
@@ -4684,7 +4688,7 @@ type="text" tabindex="0" class="pp-input save">
           <br>     
 
           <p id="btnSalvar">
-            <a href="javascript:printDiv('list')" class="pp-btn"><span>Salvar</span></a>
+            <a href="javascript:printContainer()" class="pp-btn"><span>Salvar</span></a>
           </p>
           <br>                
 
@@ -4749,20 +4753,15 @@ else{//convencional. padrao selecionado
   $(".tbl_popup").hide();
   $(".tbl_outros").hide();
 } 
-window.print();
-$('#container').css('width', '94%' );
-$('#container').css('overflow-y', 'scroll' );
 
 
+function printContainer(){
 
-function printDiv(divName){
-
-$('#container').removeAttr( 'style' );
+  $('#container').removeClass( 'container_scroll' );
 
   window.print();
 
-$('#container').css('width', '94%' );
-$('#container').css('overflow-y', 'scroll' );
+  $('#container').addClass( 'container_scroll' );
 
 }
 
