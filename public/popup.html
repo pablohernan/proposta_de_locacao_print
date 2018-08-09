@@ -4758,10 +4758,12 @@ else{//convencional. padrao selecionado
 function printContainer(){
 
   $('#container').removeClass( 'container_scroll' );
+  $('#btnSalvar').hide();
 
   window.print();
 
   $('#container').addClass( 'container_scroll' );
+  $('#btnSalvar').show();
 
 }
 
